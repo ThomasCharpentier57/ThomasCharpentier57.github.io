@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto ">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Mes projets</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Mes projets</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">À propos</a>
@@ -52,10 +52,22 @@
                         Durant ma 3ᵉ année de BUT Informatique, nous avons commencé un projet tutoré d'environ 200 heures étalé sur l'ensemble de l'année. Avec mes 3 autres coéquipiers, notre sujet était de créer un nouveau <strong>système de caméras plus performant</strong> que les systèmes actuels, en utilisant la collaboration des utilisateurs et l'intelligence artificielle... <br><br>
                         Nous avons utilisé du matériel fourni par nos tuteurs et par l'IUT. Accompagné de technologie telle que Python, Java, Flutter, Spring Boot, Flask, OpenCV et YOLO.
                     </p>
-                    <button class="btn btn-primary btn-arrow mt-auto" data-bs-toggle="modal" data-bs-target="#modal-projet1">Voir plus  <i class="fas fa-arrow-right"></i></button>
+
+                    <div id="monCarrousel-mobile" class="carousel slide w-100 h-100 p-2 d-md-none" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner" style="height: 100%; overflow: hidden;">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/projettut/materiel.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/projettut/yolo.png" class="d-block w-100 h-100" alt="Image 3" style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-projet1">Voir plus</button>
                 </div>
 
-                <div id="monCarrousel" class="carousel slide w-50 h-100 p-2" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="monCarrousel" class="carousel slide w-50 h-100 p-2  d-none d-md-block" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner" style="height: 100%; overflow: hidden;">
                         <div class="carousel-item active">
                             <img src="./assets/images/projettut/materiel.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
@@ -69,25 +81,32 @@
         </div>
 
         <div class="col-12 mb-3">
-            <div class="card d-flex flex-row">
-                <div id="monCarrousel2" class="carousel slide w-50 h-100 p-2" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="card d-flex flex-row">
+            <div id="monCarrousel2" class="carousel slide w-50 h-100 p-2 d-none d-md-block" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner" style="height: 100%; overflow: hidden;">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/crazycharlyday/crazy.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body d-flex flex-column gap-1 w-50">
+                <div class="card-title d-flex justify-content-between">
+                    <h5>Crazy Charly Day</h5>
+                    <p>Février 2025</p>
+                </div>
+                <p class="card-text" id="project2-description">Le Crazy Charly Day est un évènement organisé par l'IUT Nancy-Charlemagne où 40 équipes parmi 320 étudiants travaillent sur un thème réparti en 5 sujets pendant 15 heures non-stop. L'objectif est de mobiliser les connaissances et les compétences des étudiants dans des conditions quasi-professionnelles pour répondre aux besoins d'un commanditaire. Cette année, le commanditaire regroupait 2 entreprises à but d'emploi : La Fabrique et De Laine en Rêve ainsi qu'une boutique, RéStore TOUL.</p>
+                <div id="monCarrousel2-mobile" class="carousel slide w-100 h-100 p-2 d-md-none" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner" style="height: 100%; overflow: hidden;">
                         <div class="carousel-item active">
                             <img src="./assets/images/crazycharlyday/crazy.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
                         </div>
                     </div>
                 </div>
-
-                <div class="card-body d-flex flex-column gap-1 w-50">
-                    <div class="card-title d-flex justify-content-between">
-                        <h5>Crazy Charly Day</h5>
-                        <p>Février 2025</p>
-                    </div>
-                    <p class="card-text" id="project2-description">Le Crazy Charly Day est un évènement organisé par l'IUT Nancy-Charlemagne où 40 équipes parmi 320 étudiants travaillent sur un thème réparti en 5 sujets pendant 15 heures non-stop. L'objectif est de mobiliser les connaissances et les compétences des étudiants dans des conditions quasi-professionnelles pour répondre aux besoins d'un commanditaire. Cette année, le commanditaire regroupait 2 entreprises à but d'emploi : La Fabrique et De Laine en Rêve ainsi qu'une boutique, RéStore TOUL.</p>
-                    <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-projet2">Voir plus</button>
-                </div>
+                <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-projet2">Voir plus</button>
             </div>
         </div>
+    </div>
 
         <div class="col-12 mb-3">
             <div class="card d-flex flex-row">
@@ -98,10 +117,31 @@
                     </div>
                     <p class="card-text" id="project3-description">
                         Au début de ma 2ᵉ année de BUT, nous devions réaliser à quatre une SAE (Situation d'apprentissage et d'évaluation) dans un module de développement web. Ce projet devait être un réseau social, nommé Touiteur reprenant la plupart des fonctionnalités de Twitter (Aujourd'hui X). <br><br>Nous avions utilisé des technologies telles que PHP sans framework et une base de donnée MySQL.</p>
+
+                    <div id="monCarrousel3-mobile" class="carousel slide w-100 h-100 p-2 d-md-none" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner" style="height: 100%; overflow: hidden;">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/touiteur/touiteur_1.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/touiteur/touiteur_2.png" class="d-block w-100 h-100" alt="Image 3" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/touiteur/touiteur_3.png" class="d-block w-100 h-100" alt="Image 3" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/touiteur/touiteur_4.png" class="d-block w-100 h-100" alt="Image 3" style="object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/images/touiteur/touiteur_5.png" class="d-block w-100 h-100" alt="Image 3" style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-projet3">Voir plus</button>
                 </div>
 
-                <div id="monCarrousel3" class="carousel slide w-50 h-100 p-2" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="monCarrousel3" class="carousel slide w-50 h-100 p-2 d-none d-md-block" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner" style="height: 100%; overflow: hidden;">
                         <div class="carousel-item active">
                             <img src="./assets/images/touiteur/touiteur_1.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
@@ -125,7 +165,7 @@
 
         <div class="col-12 mb-3">
             <div class="card d-flex flex-row">
-                <div id="monCarrousel4" class="carousel slide w-50 h-100 p-2" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="monCarrousel4" class="carousel slide w-50 h-100 p-2 d-none d-md-block" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner" style="height: 100%; overflow: hidden;">
                         <div class="carousel-item active">
                             <img src="./assets/images/trello/trebas.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
@@ -139,6 +179,15 @@
                         <p>Février 2024</p>
                     </div>
                     <p class="card-text" id="project4-description">Au milieu de ma seconde année de BUT, une autre SAE consacré au module de qualité de développement et d'IHM (Interface Homme-Machine). Celle-ci avait pour but que l'on reproduise par équipe, une variante de l'outil Trello. <br><br> Cette solution a été développé avec des technologies comme Java, JavaFX et une base de donnée Oracle.</p>
+
+                    <div id="monCarrousel4-mobile" class="carousel slide w-100 h-100 p-2 d-md-none" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner" style="height: 100%; overflow: hidden;">
+                            <div class="carousel-item active">
+                                <img src="./assets/images/trello/trebas.png" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-projet4">Voir plus</button>
                 </div>
             </div>
@@ -146,6 +195,7 @@
 
     </div>
 </section>
+
 
 <div class="modal fade" id="modal-projet1" tabindex="-1" aria-labelledby="projet1" aria-hidden="true">
     <div class="modal-dialog">
