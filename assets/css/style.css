@@ -78,3 +78,7 @@ h1 {
     font-family: Oswald, sans-serif;
     border-color: #333333;
 }
+
+.modal{
+    background-color: #f1f2ed;
+}
