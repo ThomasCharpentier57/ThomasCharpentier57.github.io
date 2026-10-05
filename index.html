@@ -169,8 +169,7 @@
                                 style="object-fit: cover;">
                         </div>
 
-                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-mdt">En
-                            cours de rédaction ...</button>
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modal-mdt">Voir plus</button>
                     </div>
 
                     <div class="w-50 h-100 p-2 d-none d-md-block">
@@ -364,7 +363,7 @@
     <!-- List Modal -->
 
 
-    <!-- JCUTT -->
+    <!-- Modal JCUTT -->
     <div class="modal fade" id="modal-jcutt" tabindex="-1" aria-labelledby="jcutt">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -465,6 +464,49 @@
         </div>
     </div>
 
+    <!-- Modal MDT -->
+    <div class="modal fade" id="modal-mdt" tabindex="-1" aria-labelledby="mdt">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mdt">Mobile Data Terminal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <h2>Introduction</h2>
+                    <p> Dans le cadre d'une communauté de <strong>jeu de rôle</strong> sur le jeu vidéo Grand Theft Auto 5, on
+                            m'avait proposé de développer ce projet, un "Mobile Data Terminal", un intranet pour les
+                            membres qui jouent des rôles de policiers, pompiers, médecins, politiques, etc. afin de
+                            mieux organiser et d'embellir leur jeu.
+                            </p>
+                    <p>Les technologies utilisées sont : <strong>NextJS, TailwindCSS ainsi que PrismaDB</strong>.</p>
+                    <h2>Utilisation de NextJS</h2>
+                    <p>J'avais choisi de développer ce projet sous NextJS, qui utilise Typescript comme support ainsi que React pour le Front-End. Le système de Layout de NextJS m'a permis de m'organiser pour les thèmes graphiques/CSS (faits avec <strong>TailwindCSS</strong>) surtout avec l'utilisation de React qui permet de "fractionner le code" et pouvoir modifier chaque composant séparément permettant une meilleure lisibilité du code.</p>
+                    <h2>Authentification</h2>
+                    <p>Pour l'authentification, j'ai décidé d'utiliser <strong>NextAuth</strong> qui est un import NextJs pour gérer les credentials et les tokens. J'ai fait en sorte que la connexion ne soit disponible qu'avec discord, car dans notre contexte, cela permettait de vérifier diverses informations (si l'utilisateur est sur liste blanche, si l'utilisateur est dans l'administration du serveur, si l'utilisateur joue un personnage dans les services publics).</p>
+                    <h2>Base de données</h2>
+                    <p>J'ai décidé d'utiliser <strong>Prisma</strong>, qui est un ORM permettant de gérer les schémas de base de données de manière plus efficace. De plus, Prisma permet de convertir les enregistrements de la base de données sous forme d'objets, ce qui est un plus sur un environnement NextJS surtout que celui-ci peut être utilisé sous TypeScript. Prisma permet aussi d'intégrer le schéma de base de données sur n'importe quel type de SGBD, dans notre cas, j'avais décidé d'utiliser une base de données PostgreSQL.</p>
+                    <h2>Fonctionnalités</h2>
+                    <p>Diverses fonctionnalités ont été mises en place pour l'instant sur le MDT :</p>
+                    <ul>
+                        <li>Multi-profil (plusieurs personnages pour un compte Discord)</li>
+                        <li>Rôles personnalisables (Les chefs de factions peuvent créer autant de grades qu'ils veulent et leur attribuer des permissions)</li>
+                        <li>Validation de comptes par les chefs de factions</li>
+                        <li>Rapport sous markdown avec un système de modèles personnalisables</li>
+                        <li>Pointeuse pour enregistrer les temps de jeu (Prendre son service/Finir son service, voir les différents services effectués)</li>
+                        <li>Encoder un citoyen, un véhicule, une propriété, une arme ...</li>
+                        <li>Gestion des employés (Licencier, modifier le grade, voir le nombre d'heures...)</li>
+                        <li>Panel pour l'administration du serveur</li>
+                    </ul>
+                    <h2>Conclusion</h2>
+                    <p>Aujourd'hui, la communauté qui m'avait demandé de développer le MDT a abandonné son projet. Cependant, je continue à travailler sur ce projet pour m'améliorer avec les technologies utilisées dans cette application.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Crazy Charly Day -->
     <div class="modal fade" id="modal-crazycharlyday" tabindex="-1" aria-labelledby="crazycharlyday">
         <div class="modal-dialog modal-xl">
@@ -528,7 +570,9 @@
         </div>
     </div>
 
-<!-- Modal BotDiscord -->
+
+    
+    <!-- Modal BotDiscord -->
     <div class="modal fade" id="modal-botdiscord" tabindex="-1" aria-labelledby="botdiscord">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
